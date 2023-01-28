@@ -204,6 +204,7 @@ body {
 
 
     .sidebar__body {
+        box-sizing: border-box;
         top: 34px;
         bottom: auto;
         right: 24px;
@@ -213,7 +214,7 @@ body {
         max-width: 242px;
         gap: 10px;
         height: auto;
-        max-height: 100%;
+        max-height: calc(100% - 34px * 2);
 
         &::-webkit-scrollbar {
             width: 0px;
