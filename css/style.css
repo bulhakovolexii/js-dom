@@ -1,3 +1,6 @@
+@font-face {
+  font-family: "Papyrus";
+  src: url("/fonts/PAPYRUS.TTF"); }
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +16,7 @@ body {
   position: fixed;
   z-index: -1;
   background-image: url(../images/bg.jpeg);
+  background-color: #181818;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -104,11 +108,52 @@ body {
     transform: rotate(-45deg) translate(1.5px, 5px); }
 
 .content {
-  color: white;
   margin-left: 342px;
+  min-height: 100%;
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
+  align-items: center;
   transition: margin-left 500ms; }
+  .content__title {
+    color: white;
+    font-family: 'Papyrus';
+    font-size: 84px;
+    text-align: center;
+    padding-top: 56px; }
 
-@media screen and (max-width: 1200px) {
+.animal {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 27px;
+  padding: 0 27px 27px; }
+  .animal__info {
+    display: flex;
+    flex-direction: column;
+    gap: 34px; }
+  .animal__name {
+    align-self: center;
+    font-size: 32px;
+    padding: 22px 27px;
+    background-color: #26C7EA;
+    border-radius: 20px; }
+  .animal__img {
+    width: 100%;
+    max-width: 665px;
+    background-color: white;
+    border-radius: 20px; }
+  .animal__descr {
+    box-sizing: border-box;
+    align-self: stretch;
+    background-color: white;
+    border-radius: 20px;
+    padding: 34px;
+    max-width: 345px; }
+
+@media screen and (max-width: 1440px) {
   .sidebar__body {
     padding: 20px 0px;
     max-width: 0px;
@@ -138,7 +183,16 @@ body {
 
   .content {
     margin-left: 0; } }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1160px) {
+  .animal {
+    flex-direction: column; }
+    .animal__descr {
+      max-width: 665px; } }
+@media screen and (max-width: 768px) {
+  .bg {
+    background-size: contain;
+    background-position: top; }
+
   .sidebar__title {
     padding: 12px 18px;
     font-size: 20px;
@@ -149,7 +203,7 @@ body {
 
   .sidebar__body {
     gap: 10px;
-    top: 34px;
+    top: 80px;
     right: 24px;
     border-radius: 10px;
     height: auto;
@@ -167,7 +221,7 @@ body {
       transition: opacity 500ms, max-height 500ms, padding 500ms; }
 
   .burger-btn {
-    top: 34px;
+    top: 80px;
     right: 24px;
     left: auto; }
 
@@ -175,8 +229,26 @@ body {
     left: auto;
     background-color: transparent;
     z-index: 2; } }
-  @media screen and (max-width: 500px) and (hover: hover) and (pointer: fine) {
+  @media screen and (max-width: 768px) and (hover: hover) and (pointer: fine) {
     .burger-btn.active:hover {
       background-color: #26C7EA; } }
+
+@media screen and (max-width: 768px) {
+  .content {
+    gap: 0; }
+    .content__title {
+      font-size: 32px;
+      padding-top: 80px;
+      padding-bottom: 34px; }
+    .content .animal {
+      justify-content: flex-start;
+      background-color: #181818;
+      padding-top: 48px; }
+      .content .animal__name {
+        font-size: 16px; }
+      .content .animal__img {
+        max-width: 100%; }
+      .content .animal__descr {
+        max-width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
