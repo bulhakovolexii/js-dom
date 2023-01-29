@@ -133,6 +133,7 @@ body {
   .animal__info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 34px; }
   .animal__name {
     align-self: center;

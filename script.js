@@ -37,7 +37,7 @@ const animals = [
     },
     {
         id: 'HammerheadTitanothere',
-        name: "Hammerhead Titanothere (Na'vi Name:Angtsìk)",
+        name: "Hammerhead Titanothere</br>(Na'vi Name:Angtsìk)",
         img: './images/6.jpg',
         descr: "A large beast with a hammer-like growth on its head stays in packs. Because of the hammer, the titanotherium sees poorly, like the terrestrial rhinoceros, but replaces this lack with sharp hearing and a delicate sense of smell. Titanotherium is a herbivore, and, judging by its beak-like mouth, it does not graze, eating grass, but prefers to eat branches and other tough vegetation. When fighting predators or other males, the titanotherium strikes with hard knobbed hammer edges and usually aims them directly at the opponent's eye to incapacitate them. The beast marks the boundaries of its land with extensive destruction: fallen trees, deep marks on the rocks and huge heaps of droppings that rise above the ground, like boundary pillars."
     },
