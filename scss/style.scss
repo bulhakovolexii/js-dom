@@ -184,6 +184,7 @@ body {
 
     &__name {
         align-self: center;
+        text-align: center;
         font-size: 32px;
         padding: 22px 27px;
         background-color: #26C7EA;
@@ -282,7 +283,7 @@ body {
 
     .sidebar__body {
         gap: 10px;
-        top: 80px;
+        top: 78px;
         right: 24px;
         border-radius: 10px;
         height: auto;
@@ -305,7 +306,7 @@ body {
     }
 
     .burger-btn {
-        top: 80px;
+        top: 78px;
         right: 24px;
         left: auto;
     }
@@ -347,6 +348,15 @@ body {
             &__descr {
                 max-width: 100%;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .content {
+        &__title {
+            padding-top: 88px;
+            font-size: 24px;
         }
     }
 }

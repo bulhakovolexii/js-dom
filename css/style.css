@@ -136,6 +136,7 @@ body {
     gap: 34px; }
   .animal__name {
     align-self: center;
+    text-align: center;
     font-size: 32px;
     padding: 22px 27px;
     background-color: #26C7EA;
@@ -203,7 +204,7 @@ body {
 
   .sidebar__body {
     gap: 10px;
-    top: 80px;
+    top: 78px;
     right: 24px;
     border-radius: 10px;
     height: auto;
@@ -221,7 +222,7 @@ body {
       transition: opacity 500ms, max-height 500ms, padding 500ms; }
 
   .burger-btn {
-    top: 80px;
+    top: 78px;
     right: 24px;
     left: auto; }
 
@@ -250,5 +251,9 @@ body {
         max-width: 100%; }
       .content .animal__descr {
         max-width: 100%; } }
+@media screen and (max-width: 413px) {
+  .content__title {
+    padding-top: 88px;
+    font-size: 24px; } }
 
 /*# sourceMappingURL=style.css.map */
