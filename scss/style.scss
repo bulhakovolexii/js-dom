@@ -264,7 +264,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .bg {
-        background-size: contain;
+        background-size: 100% auto;
         background-position: top;
     }
 
