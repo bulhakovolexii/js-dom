@@ -242,7 +242,10 @@ body {
       padding-top: 80px;
       padding-bottom: 34px; }
     .content .animal {
+      width: 100%;
+      box-sizing: border-box;
       justify-content: flex-start;
+      background-color: #181818;
       padding-top: 48px; }
       .content .animal__name {
         font-size: 16px; }
