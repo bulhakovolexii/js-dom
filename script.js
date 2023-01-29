@@ -85,4 +85,11 @@ function insertContent() {
     if (sidebar.classList.contains('visible')) {
         showSidebar();
     }
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].classList.remove('active');
+        if (links[i].textContent === this.textContent) {
+            links[i].classList.add('active');
+        }
+    }
 }
