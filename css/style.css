@@ -228,13 +228,15 @@ body {
       transition: opacity 500ms, max-height 500ms, padding 500ms; }
 
   .burger-btn {
+    position: absolute;
     top: 78px;
     right: 24px;
-    left: auto; }
+    left: auto;
+    background-color: transparent;
+    scale: 0.75; }
 
   .burger-btn.active {
     left: auto;
-    background-color: transparent;
     z-index: 2; } }
   @media screen and (max-width: 768px) and (hover: hover) and (pointer: fine) {
     .burger-btn.active:hover {

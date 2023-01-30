@@ -235,7 +235,6 @@ body {
 
         &.active {
             left: 366px;
-
         }
     }
 
@@ -316,14 +315,16 @@ body {
     }
 
     .burger-btn {
+        position: absolute;
         top: 78px;
         right: 24px;
         left: auto;
+        background-color: transparent;
+        scale: 0.75;
     }
 
     .burger-btn.active {
         left: auto;
-        background-color: transparent;
         z-index: 2;
 
         @media (hover: hover) and (pointer: fine) {
