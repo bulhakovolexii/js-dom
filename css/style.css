@@ -20,7 +20,7 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
   .bg.cover {
-    background-image: url(../images/bg.jpeg); }
+    background: url(../images/bg.jpeg); }
 
 .sidebar__title {
   font-size: 32px;
