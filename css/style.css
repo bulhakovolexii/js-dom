@@ -15,11 +15,12 @@ body {
   height: 100vh;
   position: fixed;
   z-index: -1;
-  background-image: url(../images/bg.jpeg);
-  background-color: #181818;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/bg.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+  .bg.cover {
+    background-image: url(../images/bg.jpeg); }
 
 .sidebar__title {
   font-size: 32px;
@@ -28,7 +29,6 @@ body {
   margin-bottom: 26px;
   border-bottom: 2px solid white; }
 .sidebar__link {
-  align-self: flex-start;
   font-size: 32px;
   font-weight: 600;
   color: inherit;
@@ -39,6 +39,7 @@ body {
     .sidebar__link:hover {
       text-decoration: underline; } }
   .sidebar__link.active {
+    align-self: flex-start;
     background-color: #26C7EA;
     color: black;
     text-decoration: none; }
@@ -194,6 +195,10 @@ body {
   .bg {
     background-size: 100% auto;
     background-position: top; }
+    .bg.cover {
+      background: url(../images/bg.jpeg);
+      background-size: cover;
+      background-position: center; }
 
   .sidebar__title {
     padding: 12px 18px;
@@ -217,7 +222,7 @@ body {
     .sidebar__body::-webkit-scrollbar {
       width: 0px; }
     .sidebar__body.visible {
-      max-height: calc(100% - 34px * 2);
+      max-height: calc(100% - 100px);
       padding: 52px 18px 18px 18px;
       opacity: 1;
       transition: opacity 500ms, max-height 500ms, padding 500ms; }
@@ -242,12 +247,22 @@ body {
       font-size: 32px;
       padding-top: 80px;
       padding-bottom: 34px; }
+      .content__title.cover {
+        flex-grow: 1;
+        font-size: 64px;
+        padding: 38vh 0 0 0; }
     .content .animal {
       width: 100%;
       box-sizing: border-box;
       justify-content: flex-start;
       background-color: #181818;
-      padding-top: 48px; }
+      padding-top: 48px;
+      gap: 18px; }
+      .content .animal.cover {
+        background-color: transparent;
+        flex-grow: 0; }
+      .content .animal__info {
+        gap: 18px; }
       .content .animal__name {
         font-size: 16px; }
       .content .animal__img {
