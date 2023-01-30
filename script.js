@@ -1,12 +1,3 @@
-const sidebar = document.querySelector('.sidebar__body');
-const burgerBtn = document.querySelector('.burger-btn');
-const sidebarBg = document.querySelector('.sidebar__bg');
-const links = document.querySelectorAll('.sidebar__link');
-const content = document.querySelector('.animal');
-const bg = document.querySelector('.bg');
-const title = document.querySelector('.content__title');
-
-
 const animals = [
     {
         id: 'thanator',
@@ -57,13 +48,16 @@ const animals = [
         descr: "This unaggressive tree dweller stands approximately 5 ft (1.5 m) tall, but weighs no more than 14 lb (6 kg). Flaps of skin between its outstretched limbs help it to glide from branch to branch. This allows the animal to fall for over twelve meters without risk of injury. An adept herbivore, the prolemuris' teeth are adapted to cut through the tensile strength of Pandora flora. Some scientists believe the chattering prolemuris marks an evolutionary step between most six-limbed, four-eyed Pandoran animals and the four-limbed, two-eyed Na’vi."
     }
 ];
+const sidebar = document.querySelector('.sidebar__body');
+const sidebarBg = document.querySelector('.sidebar__bg');
+const burgerBtn = document.querySelector('.burger-btn');
+const content = document.querySelector('.animal');
+const bg = document.querySelector('.bg');
+const title = document.querySelector('.content__title');
 
 burgerBtn.addEventListener('click', showSidebar);
 sidebarBg.addEventListener('click', showSidebar);
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', insertContent);
-}
-
+sidebar.addEventListener('click', insertContent)
 
 function showSidebar() {
     sidebar.classList.toggle('visible');
@@ -76,29 +70,28 @@ function showSidebar() {
     }
 }
 
-function insertContent() {
-    const animal = animals.filter(animal => animal.id === this.id)[0];
-    content.innerHTML = `
-        <div class="animal__info">
+function insertContent(event) {
+    const animal = animals.filter(animal => animal.id === event.target.id)[0];
+
+    content.innerHTML =
+
+        `<div class="animal__info">
             <h2 class="animal__name">${animal.name}</h2>
             <img src="${animal.img}" alt="" class="animal__img">
         </div>
-        <p class="animal__descr">${animal.descr}</p>
-    `;
-    if (sidebar.classList.contains('visible')) {
-        showSidebar();
+        <p class="animal__descr">${animal.descr}</p>`;
+
+    for (let i = 1; i <= sidebar.childElementCount - 1; i++) {
+        sidebar.children[i].classList.remove('active');
     }
 
-    for (let i = 0; i < links.length; i++) {
-        links[i].classList.remove('active');
-        if (links[i].textContent === this.textContent) {
-            links[i].classList.add('active');
-        }
+    event.target.classList.add('active');
+
+    if (sidebar.classList.contains('visible')) {
+        showSidebar();
     }
 
     content.classList.remove('cover');
     bg.classList.remove('cover');
     title.classList.remove('cover');
 }
-
-
