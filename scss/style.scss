@@ -25,7 +25,7 @@ body {
     background-repeat: no-repeat;
 
     &.cover {
-        background: url(../images/bg.jpeg);
+        background: center / cover no-repeat url(../images/bg.jpeg);
     }
 }
 
